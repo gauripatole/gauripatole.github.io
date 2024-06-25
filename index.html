@@ -62,8 +62,23 @@
 								</header>
 								<a href="https://www.linkedin.com/in/gauri-patole/" class="image main"><img src="images/Screenshot%202024-01-07%20202228.png" alt="" /></a>
 								<ul class="actions special">
-									<li><a href="https://github.com/gauripatole/gauripatole.github.io/blob/main/Gauri_Data_Science.pdf" class="button large">Resume</a></li>
-								</ul>
+									<button onclick="togglePdfVisibility()">Toggle Resume</button>
+
+									<!-- Container for embedding PDF -->
+									<div id="pdfViewer" style="display:none;">
+										<iframe src="file:///C:/Users/gauri/Downloads/Resume/Gauri_J_Patole_Data_Analyst.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
+									</div>
+								
+									<script>
+										function togglePdfVisibility() {
+											var pdfViewer = document.getElementById('pdfViewer');
+											if (pdfViewer.style.display === 'none') {
+												pdfViewer.style.display = 'block';
+											} else {
+												pdfViewer.style.display = 'none';
+											}
+										}
+									</script>								</ul>
 							</article>
 
 						<!-- Posts -->
