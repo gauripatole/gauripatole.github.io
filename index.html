@@ -47,12 +47,19 @@
         .button:hover {
             background: #0056b3;
         }
+        #intro, #main, #footer, #header, #nav {
+            position: relative; /* Make elements stack on top of the background */
+            z-index: 1; /* Ensure they appear above the background */
+        }
     </style>
 </head>
+
 <body class="is-preload" data-aos="fade-in">
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
+        <!-- Dynamic Background Animation -->
+        <div id="background-animation"></div>
 
         <!-- Intro -->
         <div id="intro" data-aos="fade-down">
@@ -252,6 +259,25 @@
     <script>
         AOS.init();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.waves.min.js"></script>
+    <script>
+        VANTA.WAVES({
+            el: "#background-animation",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x0056b3,
+            shininess: 50.00,
+            waveHeight: 20.00,
+            waveSpeed: 1.00,
+            zoom: 0.75
+        });
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -261,5 +287,3 @@
     <script src="assets/js/main.js"></script>
 
 </body>
-
-
