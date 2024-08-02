@@ -1,21 +1,18 @@
 <!DOCTYPE HTML>
-<nav id="nav" data-aos="fade-down">
-    <ul class="links">
-        <li class="active"><a href="index.html">Portfolio</a></li>
-    </ul>
-    <ul class="icons">
-        <li><a href="https://www.linkedin.com/in/gauri-patole/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-        <li><a href="https://www.kaggle.com/gauri305" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
-        <li><a href="https://github.com/gauripatole" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-    </ul>
-    <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
-</nav>
-body.dark-theme {
+<html>
+<head>
+    <title>Gauri Patole</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        body.dark-theme {
     background-color: #121212;
     color: #ffffff;
 }
 
-/* Additional dark theme styles */
 .dark-theme .button {
     background: #333333;
     color: #ffffff;
@@ -26,7 +23,6 @@ body.dark-theme {
     color: #333333;
 }
 
-/* Styling for the toggle button */
 #theme-toggle {
     background: none;
     border: none;
@@ -35,35 +31,7 @@ body.dark-theme {
     color: #ffffff;
     margin-left: 15px;
 }
-<script>
-    function toggleTheme() {
-        document.body.classList.toggle('dark-theme');
 
-        // Optional: Save the theme preference in local storage
-        if (document.body.classList.contains('dark-theme')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.removeItem('theme');
-        }
-    }
-
-    // Optional: Apply the saved theme on page load
-    document.addEventListener('DOMContentLoaded', () => {
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-theme');
-        }
-    });
-</script>
-
-<html>
-<head>
-    <title>Gauri Patole</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
         body {
             margin: 0;
             overflow-x: hidden;
@@ -154,7 +122,9 @@ body.dark-theme {
                 <li><a href="https://www.kaggle.com/gauri305" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
                 <li><a href="https://github.com/gauripatole" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
             </ul>
+            <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
         </nav>
+        
 
         <!-- Main -->
         <div id="main">
@@ -340,6 +310,38 @@ body.dark-theme {
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.waves.min.js"></script>
+<script>
+    VANTA.WAVES({
+        el: "#background-animation",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x0056b3,
+        shininess: 50.00,
+        waveHeight: 20.00,
+        waveSpeed: 1.00,
+        zoom: 0.75
+    });
+</script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
 
 </body>
 </html>
